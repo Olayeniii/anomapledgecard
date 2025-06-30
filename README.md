@@ -54,7 +54,7 @@ npm start
 
 ```
 
-## Installation
+## Customization
 
 To customize the card template:
 
