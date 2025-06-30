@@ -2,6 +2,10 @@
   "name": "anomapledgecard",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Olayeniii/anomapledgecard.git"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
