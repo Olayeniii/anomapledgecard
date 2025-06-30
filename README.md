@@ -1,6 +1,6 @@
 # Anoma Mage ID Generator
 
-![Anoma ID Card Preview](public/anoma-card-preview.png)
+![Anoma ID Card Preview](src/images/anomacard.PNG)
 
 A web application that allows Anoma community members to create custom digital identity cards with their profile information, role, and duties.
 
