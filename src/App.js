@@ -7,6 +7,7 @@ import myImage2 from './images/anomacard.PNG';
 import anomaLogo from './images/anoma-logo.png';
 import myimage from './images/Ifeola.png';
 
+
 export default function App() {
   const [form, setForm] = useState({
     name: "",
@@ -38,8 +39,10 @@ export default function App() {
   };
 
   const downloadCard = () => {
-    html2canvas(cardRef.current, {
-      scale: 5,
+    const card = cardRef.current;
+    card.classList.add("force-large");
+    html2canvas(card, {
+      scale: window.devicePixelRatio * 2,
       backgroundColor: null,
       useCORS: true,
     }).then((canvas) => {
@@ -47,13 +50,16 @@ export default function App() {
       link.download = "anoma_id.png";
       link.href = canvas.toDataURL();
       link.click();
+      card.classList.remove("force-large");
       triggerConfetti();
     });
   };
 
   const downloadPDF = () => {
-    html2canvas(cardRef.current, {
-      scale: 5,
+    const card = cardRef.current;
+    card.classList.add("force-large");
+    html2canvas(card, {
+      scale: window.devicePixelRatio * 2,
       backgroundColor: null,
       useCORS: true,
     }).then((canvas) => {
@@ -65,12 +71,13 @@ export default function App() {
       });
       pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
       pdf.save("anoma_id.pdf");
+      card.classList.remove("force-large");
       triggerConfetti();
     });
   };
-
   return (
     <>
+
       <div className="container">
         <div className="header">
           <img src={anomaLogo} alt="Anoma Logo" className="logo" />
@@ -120,12 +127,19 @@ export default function App() {
               value={form.joined}
               onChange={handleChange}
             />
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              onChange={handleChange}
-            />
+            <div className="file-upload">
+      <label htmlFor="file-upload" className="custom-file-upload">
+       📁 {form.image ? "Change Photo" : "Upload Profile Photo"}
+      </label>
+     <input 
+       id="file-upload"
+       type="file"
+        name="image"
+      accept="image/*"
+      onChange={handleChange}
+   />
+    </div>
+
             <div className="button-group">
               <button type="button" onClick={downloadCard}>
                 Download PNG

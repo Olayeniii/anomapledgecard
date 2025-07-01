@@ -36,6 +36,7 @@ body {
 }
 
 .header {
+    background: linear-gradient(to right, #eef2f6, #e2e6ea);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -323,6 +324,41 @@ h1 {
     color: #6c757d;
     font-style: italic;
 }
+
+.force-large {
+    width: 1020px !important;
+    height: 720px !important;
+}
+
+.file-upload {
+  position: relative;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 12px 20px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, var(--accent-color), var(--granite-red));
+  color: #fff;
+  border-radius: 8px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.custom-file-upload:hover {
+  background: linear-gradient(to bottom, var(--button-hover), #7a1616);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .card-wrapper {
