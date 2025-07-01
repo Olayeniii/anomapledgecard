@@ -197,17 +197,6 @@ input[type="file"] {
   animation: fadeIn 0.8s forwards;
 }
 
-.card-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(218, 165, 32, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(178, 34, 34, 0.05) 0%, transparent 40%);
-  z-index: 1;
-  pointer-events: none;
-}
-
 .card-wrapper img.card-bg {
   position: absolute;
   width: 100%;
@@ -324,10 +313,18 @@ input[type="file"] {
   font-style: italic;
 }
 
+/* === FIXES START HERE === */
+
 /* Forced large + clean snapshot styles */
 .force-large {
   width: 1020px !important;
   height: 720px !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  margin: 0 !important;
+  transform: none !important;
 }
 .force-large .field {
   font-size: 18px !important;
@@ -341,70 +338,84 @@ input[type="file"] {
 .force-clean .card-wrapper img.card-bg {
   mix-blend-mode: normal !important;
   opacity: 1 !important;
-}
-.force-clean .card-wrapper::before {
-  display: none !important;
+  filter: none !important;
 }
 
-.force-large .card-wrapper {
-  animation: none !important;
-  opacity: 1 !important;
-  transform: none !important;
-}
-.force-large .card-wrapper::before {
-  display: none !important;
+/* Remove all transform scaling from media queries */
+@media (max-width: 480px) {
+  .card-wrapper { 
+    transform: none !important; 
+  }
 }
 
-/* Responsiveness */
+@media (max-width: 360px) {
+  .card-wrapper { 
+    transform: none !important; 
+  }
+}
+
+@media (max-width: 280px) {
+  .card-wrapper { 
+    transform: none !important; 
+  }
+}
+
+/* Responsiveness without transforms */
+@media (max-width: 1024px) {
+  .card-wrapper {
+    width: 80vw;
+    height: auto;
+    aspect-ratio: 5/3;
+  }
+  .field { 
+    font-size: 1.5vw !important; 
+    transform: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .card-wrapper {
     width: 90vw;
     height: auto;
-    aspect-ratio: 5 / 3;
-    margin: -20px 0;
+    aspect-ratio: 5/3;
   }
-  .field { font-size: 2.5vw; }
-  .name, .xHandle, .role, .duty, .joined { transform: translateX(-50%); }
-  .name { top: 60% !important; left: 24% !important; }
-  .xHandle { top: 69% !important; left: 24% !important; }
-  .role { top: 78% !important; left: 16% !important; }
-  .duty { top: 87% !important; left: 18% !important; }
-  .joined { top: 94% !important; left: 24% !important; }
+  .field { 
+    font-size: 1.8vw !important;
+    transform: none !important;
+  }
+  
+  .field.name { top: 59% !important; left: 16% !important; }
+  .field.xHandle { top: 66.8% !important; left: 16% !important; }
+  .field.role { top: 73.8% !important; left: 16% !important; }
+  .field.duty { top: 81% !important; left: 16% !important; }
+  .field.joined { top: 88% !important; left: 16% !important; }
+  
   .profile-pic {
-    width: 20% !important; height: auto !important;
-    top: 20% !important; left: 22% !important;
-    transform: translateX(-50%);
+    width: 20.3% !important;
+    height: auto !important;
+    aspect-ratio: 1/1;
+    top: 25.5% !important;
+    left: 12% !important;
   }
+  
   .header { flex-direction: column; }
   .logo { position: relative; margin-bottom: 15px; left: auto; }
   .footer-links { gap: 15px; }
 }
+
 @media (max-width: 480px) {
-  .card-wrapper { transform: scale(0.75); }
-  .field { font-size: 3vw; }
+  .card-wrapper {
+    width: 95vw;
+    height: auto;
+  }
+  .field { 
+    font-size: 2.5vw !important;
+    max-width: 60% !important;
+  }
   .layout { flex-direction: column; }
   .form { width: 100%; margin-bottom: 20px; }
   .button-group { grid-template-columns: 1fr; }
-  .footer-links { flex-direction: column; gap: 10px; }
 }
-
-@media (max-width: 1024px) {
-  .card-wrapper { width: 80vw; }
-  .field { font-size: 2vw; }
-}
-@media (max-width: 640px) {
-  .card-wrapper { width: 95vw; }
-  .field { font-size: 3vw; }
-}
-@media (max-width: 360px) {
-  .card-wrapper { transform: scale(0.85); }
-  .field { font-size: 3.5vw; }
-}
-@media (max-width: 280px) {
-  .card-wrapper { transform: scale(0.75); }
-  .field { font-size: 4vw; }
-}
-
 
 /* Fade-in */
 @keyframes fadeIn {
