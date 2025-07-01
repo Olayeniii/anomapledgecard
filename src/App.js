@@ -39,42 +39,50 @@ export default function App() {
   };
 
   const downloadCard = () => {
-    const card = cardRef.current;
-    card.classList.add("force-large");
-    html2canvas(card, {
-      scale: window.devicePixelRatio * 2,
-      backgroundColor: null,
-      useCORS: true,
-    }).then((canvas) => {
-      const link = document.createElement("a");
-      link.download = "anoma_id.png";
-      link.href = canvas.toDataURL();
-      link.click();
-      card.classList.remove("force-large");
-      triggerConfetti();
-    });
-  };
+  const card = cardRef.current;
+  document.body.classList.add("force-clean");
+  card.classList.add("force-large");
 
-  const downloadPDF = () => {
-    const card = cardRef.current;
-    card.classList.add("force-large");
-    html2canvas(card, {
-      scale: window.devicePixelRatio * 2,
-      backgroundColor: null,
-      useCORS: true,
-    }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF({
-        orientation: "landscape",
-        unit: "px",
-        format: [canvas.width, canvas.height],
-      });
-      pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
-      pdf.save("anoma_id.pdf");
-      card.classList.remove("force-large");
-      triggerConfetti();
+  html2canvas(card, {
+    scale: 5,
+    backgroundColor: null,
+    useCORS: true,
+  }).then((canvas) => {
+    const link = document.createElement("a");
+    link.download = "anoma_id.png";
+    link.href = canvas.toDataURL();
+    link.click();
+
+    card.classList.remove("force-large");
+    document.body.classList.remove("force-clean");
+    triggerConfetti();
+  });
+};
+
+const downloadPDF = () => {
+  const card = cardRef.current;
+  document.body.classList.add("force-clean");
+  card.classList.add("force-large");
+
+  html2canvas(card, {
+    scale: 5,
+    backgroundColor: null,
+    useCORS: true,
+  }).then((canvas) => {
+    const imgData = canvas.toDataURL("image/png");
+    const pdf = new jsPDF({
+      orientation: "landscape",
+      unit: "px",
+      format: [canvas.width, canvas.height],
     });
-  };
+    pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
+    pdf.save("anoma_id.pdf");
+
+    card.classList.remove("force-large");
+    document.body.classList.remove("force-clean");
+    triggerConfetti();
+  });
+};
   return (
     <>
 
