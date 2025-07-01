@@ -31,7 +31,7 @@ A web application that allows Anoma community members to create custom digital i
    - PNG for digital use
    - PDF for printing
 
-## Technologies Used
+## Tools Used
 
 - React.js
 - HTML2Canvas (for image capture)
