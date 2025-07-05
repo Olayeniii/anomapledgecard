@@ -41,10 +41,9 @@ export default function App() {
   const downloadCard = () => {
     const card = cardRef.current;
     document.body.classList.add("force-clean");
-    card.classList.add("force-large");
 
     html2canvas(card, {
-      scale: 5,
+      scale: 2,
       backgroundColor: null,
       useCORS: true,
     }).then((canvas) => {
@@ -53,7 +52,6 @@ export default function App() {
       link.href = canvas.toDataURL();
       link.click();
 
-      card.classList.remove("force-large");
       document.body.classList.remove("force-clean");
       triggerConfetti();
     });
@@ -62,10 +60,9 @@ export default function App() {
   const downloadPDF = () => {
     const card = cardRef.current;
     document.body.classList.add("force-clean");
-    card.classList.add("force-large");
 
     html2canvas(card, {
-      scale: 5,
+      scale: 2,
       backgroundColor: null,
       useCORS: true,
     }).then((canvas) => {
@@ -78,7 +75,6 @@ export default function App() {
       pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
       pdf.save("anoma_id.pdf");
 
-      card.classList.remove("force-large");
       document.body.classList.remove("force-clean");
       triggerConfetti();
     });

@@ -2,9 +2,9 @@
 const IDCard = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={540}
-    height={800}
     viewBox="0 0 540 800"
+    preserveAspectRatio="xMidYMid meet"
+    style={{ width: '100%', height: '100%' }}
     {...props}
   >
     <rect

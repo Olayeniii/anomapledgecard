@@ -175,6 +175,18 @@ input[type="file"] {
   transform: translateZ(0);
   opacity: 0;
   animation: fadeIn 0.8s forwards;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .profile-pic {
@@ -192,13 +204,14 @@ input[type="file"] {
 
 .hat-graphic {
   position: absolute;
-  top: 30px;   
-  left: 160px;
-  width: 170px;
+  top: 2.5%;   
+  left: 29.6%;
+  width: 31.5%;
+  height: auto;
   z-index: 2;  /* Above the profile pic */
   pointer-events: none;
+  object-fit: contain;
 }
-
 
 .field {
   position: absolute;
@@ -290,10 +303,12 @@ input[type="file"] {
   }
 }
 
-.force-clean .card-wrapper svg {
-  filter: none !important;
-  mix-blend-mode: normal !important;
+.force-clean .card-wrapper {
+  background: #181818 !important; /* fallback solid background for download */
+  border: 3px solid #b22222 !important; /* fallback solid border for download */
   opacity: 1 !important;
+  box-shadow: none !important;
+  border-image: none !important;
 }
 
 .force-large {
@@ -319,8 +334,10 @@ input[type="file"] {
 @media (max-width: 1024px) {
   .card-wrapper {
     width: 80vw;
+    max-width: 540px;
     height: auto;
     aspect-ratio: 27 / 40;
+    margin: 0 auto;
   }
 
   .field {
@@ -332,8 +349,10 @@ input[type="file"] {
 @media (max-width: 768px) {
   .card-wrapper {
     width: 90vw;
+    max-width: 480px;
     height: auto;
     aspect-ratio: 27 / 40;
+    margin: 0 auto;
   }
 
   .field {
@@ -385,33 +404,36 @@ input[type="file"] {
 @media (max-width: 480px) {
   .card-wrapper {
     width: 95vw;
+    max-width: 400px;
     height: auto;
+    aspect-ratio: 27 / 40;
+    margin: 0 auto;
   }
 
   .field {
-    font-size: 2.5vw !important;
+    font-size: 1.2em !important;
     max-width: 60% !important;
-    left: 10% !important;
+    left: 29.6% !important;
   }
 
   .field.name {
-    top: 55% !important;
-    font-size: 4.6vw !important;
+    top: 41.25% !important;
+    font-size: 1.4em !important;
   }
 
   .field.xHandle {
-    top: 60.5% !important;
-    font-size: 3.8vw !important;
+    top: 46.25% !important;
+    font-size: 1.2em !important;
   }
 
   .field.role {
-    top: 66% !important;
-    font-size: 3.8vw !important;
+    top: 50.75% !important;
+    font-size: 1.2em !important;
   }
 
   .field.joined {
-    top: 71.5% !important;
-    font-size: 3.8vw !important;
+    top: 55.625% !important;
+    font-size: 1.2em !important;
   }
 
   .profile-pic {
@@ -424,241 +446,70 @@ input[type="file"] {
 
   .hat-graphic {
     width: 35% !important;
-    top: 8% !important;
+    height: auto !important;
+    top: 3% !important;
     left: 32% !important;
+    object-fit: contain !important;
   }
 }
 
 @media (max-width: 414px) {
-  .card-wrapper {
-    width: 98vw;
-  }
-
   .field {
-    font-size: 3vw !important;
+    font-size: 1.2em !important;
     max-width: 65% !important;
-    left: 8% !important;
+    left: 29.6% !important;
   }
-
-  .field.name {
-    top: 54% !important;
-    font-size: 5vw !important;
-  }
-
-  .field.xHandle {
-    top: 60% !important;
-    font-size: 4.2vw !important;
-  }
-
-  .field.role {
-    top: 65.5% !important;
-    font-size: 4.2vw !important;
-  }
-
-  .field.joined {
-    top: 71% !important;
-    font-size: 4.2vw !important;
-  }
-
-  .profile-pic {
-    width: 24% !important;
-    top: 20% !important;
-    left: 37% !important;
-  }
-
-  .hat-graphic {
-    width: 38% !important;
-    top: 7% !important;
-    left: 30% !important;
-  }
+  .field.name { top: 41.25% !important; font-size: 1.4em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 1.2em !important; }
+  .field.role { top: 50.75% !important; font-size: 1.2em !important; }
+  .field.joined { top: 55.625% !important; font-size: 1.2em !important; }
 }
 
 @media (max-width: 375px) {
   .field {
-    font-size: 3.2vw !important;
+    font-size: 1.1em !important;
     max-width: 70% !important;
-    left: 6% !important;
+    left: 29.6% !important;
   }
-
-  .field.name {
-    top: 53% !important;
-    font-size: 5.5vw !important;
-  }
-
-  .field.xHandle {
-    top: 59.5% !important;
-    font-size: 4.5vw !important;
-  }
-
-  .field.role {
-    top: 65% !important;
-    font-size: 4.5vw !important;
-  }
-
-  .field.joined {
-    top: 70.5% !important;
-    font-size: 4.5vw !important;
-  }
-
-  .profile-pic {
-    width: 26% !important;
-    top: 19% !important;
-    left: 36% !important;
-  }
-
-  .hat-graphic {
-    width: 40% !important;
-    top: 6% !important;
-    left: 28% !important;
-  }
+  .field.name { top: 41.25% !important; font-size: 1.3em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 1.1em !important; }
+  .field.role { top: 50.75% !important; font-size: 1.1em !important; }
+  .field.joined { top: 55.625% !important; font-size: 1.1em !important; }
 }
 
 @media (max-width: 360px) {
-  .card-wrapper {
-    transform: none !important;
-  }
-
   .field {
-    font-size: 3.5vw !important;
+    font-size: 1em !important;
     max-width: 75% !important;
-    left: 5% !important;
+    left: 29.6% !important;
   }
-
-  .field.name {
-    top: 52% !important;
-    font-size: 6vw !important;
-  }
-
-  .field.xHandle {
-    top: 59% !important;
-    font-size: 4.8vw !important;
-  }
-
-  .field.role {
-    top: 64.5% !important;
-    font-size: 4.8vw !important;
-  }
-
-  .field.joined {
-    top: 70% !important;
-    font-size: 4.8vw !important;
-  }
-
-  .profile-pic {
-    width: 28% !important;
-    top: 18% !important;
-    left: 35% !important;
-  }
-
-  .hat-graphic {
-    width: 42% !important;
-    top: 5% !important;
-    left: 26% !important;
-  }
+  .field.name { top: 41.25% !important; font-size: 1.2em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 1em !important; }
+  .field.role { top: 50.75% !important; font-size: 1em !important; }
+  .field.joined { top: 55.625% !important; font-size: 1em !important; }
 }
 
 @media (max-width: 320px) {
-  .card-wrapper {
-    width: 100vw;
-    transform: none !important;
-  }
-
   .field {
-    font-size: 4vw !important;
+    font-size: 0.95em !important;
     max-width: 80% !important;
-    left: 3% !important;
+    left: 29.6% !important;
   }
-
-  .field.name {
-    top: 51% !important;
-    font-size: 6.5vw !important;
-  }
-
-  .field.xHandle {
-    top: 58.5% !important;
-    font-size: 5.2vw !important;
-  }
-
-  .field.role {
-    top: 64% !important;
-    font-size: 5.2vw !important;
-  }
-
-  .field.joined {
-    top: 69.5% !important;
-    font-size: 5.2vw !important;
-  }
-
-  .profile-pic {
-    width: 30% !important;
-    top: 17% !important;
-    left: 34% !important;
-  }
-
-  .hat-graphic {
-    width: 45% !important;
-    top: 4% !important;
-    left: 24% !important;
-  }
-
-  .form {
-    padding: 20px;
-  }
-
-  .form input,
-  .form select {
-    padding: 14px;
-    font-size: 16px;
-  }
-
-  .form button {
-    padding: 16px;
-    font-size: 16px;
-    min-height: 48px;
-  }
+  .field.name { top: 41.25% !important; font-size: 1.1em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.95em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.95em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.95em !important; }
 }
 
 @media (max-width: 280px) {
-  .card-wrapper {
-    transform: none !important;
-  }
-
   .field {
-    font-size: 4.5vw !important;
+    font-size: 0.9em !important;
     max-width: 85% !important;
-    left: 2% !important;
+    left: 29.6% !important;
   }
-
-  .field.name {
-    top: 50% !important;
-    font-size: 7vw !important;
-  }
-
-  .field.xHandle {
-    top: 58% !important;
-    font-size: 5.5vw !important;
-  }
-
-  .field.role {
-    top: 63.5% !important;
-    font-size: 5.5vw !important;
-  }
-
-  .field.joined {
-    top: 69% !important;
-    font-size: 5.5vw !important;
-  }
-
-  .profile-pic {
-    width: 32% !important;
-    top: 16% !important;
-    left: 33% !important;
-  }
-
-  .hat-graphic {
-    width: 48% !important;
-    top: 3% !important;
-    left: 22% !important;
-  }
+  .field.name { top: 41.25% !important; font-size: 1em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.9em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.9em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.9em !important; }
 }
 
