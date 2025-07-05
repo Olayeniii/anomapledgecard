@@ -330,6 +330,18 @@ input[type="file"] {
   font-size: 28px !important;
 }
 
+.force-download-size .card-wrapper {
+  width: 540px !important;
+  height: 800px !important;
+  aspect-ratio: unset !important;
+  max-width: unset !important;
+  min-width: unset !important;
+  left: 0 !important;
+  top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .card-wrapper {
@@ -356,8 +368,15 @@ input[type="file"] {
   }
 
   .field {
-    font-size: 1.8vw !important;
+    font-size: 1.2em !important;
+    left: 29.6% !important;
+    max-width: 60% !important;
   }
+
+  .field.name { top: 41.5% !important; }
+  .field.xHandle { top: 46.5% !important; }
+  .field.role { top: 51.5% !important; }
+  .field.joined { top: 56.5% !important; }
 
   .layout {
     flex-direction: column;
@@ -399,6 +418,16 @@ input[type="file"] {
   .footer-links {
     gap: 15px;
   }
+
+  .profile-pic {
+    width: 20% !important;
+    aspect-ratio: 1 / 1 !important;
+    top: 17% !important;
+    left: 40% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -410,38 +439,40 @@ input[type="file"] {
     margin: 0 auto;
   }
 
+  .profile-pic {
+    width: 22% !important;
+    aspect-ratio: 1 / 1 !important;
+    top: 18.5% !important;
+    left: 39% !important;
+    height: auto !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+  }
+
   .field {
-    font-size: 1.2em !important;
+    font-size: 0.9em !important;
     max-width: 60% !important;
     left: 29.6% !important;
   }
 
   .field.name {
     top: 41.25% !important;
-    font-size: 1.4em !important;
+    font-size: 1em !important;
   }
 
   .field.xHandle {
     top: 46.25% !important;
-    font-size: 1.2em !important;
+    font-size: 0.9em !important;
   }
 
   .field.role {
     top: 50.75% !important;
-    font-size: 1.2em !important;
+    font-size: 0.9em !important;
   }
 
   .field.joined {
     top: 55.625% !important;
-    font-size: 1.2em !important;
-  }
-
-  .profile-pic {
-    width: 22% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1;
-    top: 21% !important;
-    left: 38.5% !important;
+    font-size: 0.9em !important;
   }
 
   .hat-graphic {

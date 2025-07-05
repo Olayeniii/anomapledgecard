@@ -40,7 +40,7 @@ export default function App() {
 
   const downloadCard = () => {
     const card = cardRef.current;
-    document.body.classList.add("force-clean");
+    document.body.classList.add("force-clean", "force-download-size");
 
     html2canvas(card, {
       scale: 2,
@@ -52,14 +52,14 @@ export default function App() {
       link.href = canvas.toDataURL();
       link.click();
 
-      document.body.classList.remove("force-clean");
+      document.body.classList.remove("force-clean", "force-download-size");
       triggerConfetti();
     });
   };
 
   const downloadPDF = () => {
     const card = cardRef.current;
-    document.body.classList.add("force-clean");
+    document.body.classList.add("force-clean", "force-download-size");
 
     html2canvas(card, {
       scale: 2,
@@ -75,7 +75,7 @@ export default function App() {
       pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
       pdf.save("anoma_id.pdf");
 
-      document.body.classList.remove("force-clean");
+      document.body.classList.remove("force-clean", "force-download-size");
       triggerConfetti();
     });
   };
