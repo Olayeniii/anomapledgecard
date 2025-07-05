@@ -350,6 +350,18 @@ input[type="file"] {
     margin-bottom: 20px;
   }
 
+  .form input,
+  .form select {
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .form button {
+    padding: 14px;
+    font-size: 16px;
+    min-height: 44px; /* Better touch target */
+  }
+
   .button-group {
     grid-template-columns: 1fr;
   }
@@ -409,17 +421,244 @@ input[type="file"] {
     top: 21% !important;
     left: 38.5% !important;
   }
+
+  .hat-graphic {
+    width: 35% !important;
+    top: 8% !important;
+    left: 32% !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .card-wrapper {
+    width: 98vw;
+  }
+
+  .field {
+    font-size: 3vw !important;
+    max-width: 65% !important;
+    left: 8% !important;
+  }
+
+  .field.name {
+    top: 54% !important;
+    font-size: 5vw !important;
+  }
+
+  .field.xHandle {
+    top: 60% !important;
+    font-size: 4.2vw !important;
+  }
+
+  .field.role {
+    top: 65.5% !important;
+    font-size: 4.2vw !important;
+  }
+
+  .field.joined {
+    top: 71% !important;
+    font-size: 4.2vw !important;
+  }
+
+  .profile-pic {
+    width: 24% !important;
+    top: 20% !important;
+    left: 37% !important;
+  }
+
+  .hat-graphic {
+    width: 38% !important;
+    top: 7% !important;
+    left: 30% !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .field {
+    font-size: 3.2vw !important;
+    max-width: 70% !important;
+    left: 6% !important;
+  }
+
+  .field.name {
+    top: 53% !important;
+    font-size: 5.5vw !important;
+  }
+
+  .field.xHandle {
+    top: 59.5% !important;
+    font-size: 4.5vw !important;
+  }
+
+  .field.role {
+    top: 65% !important;
+    font-size: 4.5vw !important;
+  }
+
+  .field.joined {
+    top: 70.5% !important;
+    font-size: 4.5vw !important;
+  }
+
+  .profile-pic {
+    width: 26% !important;
+    top: 19% !important;
+    left: 36% !important;
+  }
+
+  .hat-graphic {
+    width: 40% !important;
+    top: 6% !important;
+    left: 28% !important;
+  }
 }
 
 @media (max-width: 360px) {
   .card-wrapper {
     transform: none !important;
   }
+
+  .field {
+    font-size: 3.5vw !important;
+    max-width: 75% !important;
+    left: 5% !important;
+  }
+
+  .field.name {
+    top: 52% !important;
+    font-size: 6vw !important;
+  }
+
+  .field.xHandle {
+    top: 59% !important;
+    font-size: 4.8vw !important;
+  }
+
+  .field.role {
+    top: 64.5% !important;
+    font-size: 4.8vw !important;
+  }
+
+  .field.joined {
+    top: 70% !important;
+    font-size: 4.8vw !important;
+  }
+
+  .profile-pic {
+    width: 28% !important;
+    top: 18% !important;
+    left: 35% !important;
+  }
+
+  .hat-graphic {
+    width: 42% !important;
+    top: 5% !important;
+    left: 26% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-wrapper {
+    width: 100vw;
+    transform: none !important;
+  }
+
+  .field {
+    font-size: 4vw !important;
+    max-width: 80% !important;
+    left: 3% !important;
+  }
+
+  .field.name {
+    top: 51% !important;
+    font-size: 6.5vw !important;
+  }
+
+  .field.xHandle {
+    top: 58.5% !important;
+    font-size: 5.2vw !important;
+  }
+
+  .field.role {
+    top: 64% !important;
+    font-size: 5.2vw !important;
+  }
+
+  .field.joined {
+    top: 69.5% !important;
+    font-size: 5.2vw !important;
+  }
+
+  .profile-pic {
+    width: 30% !important;
+    top: 17% !important;
+    left: 34% !important;
+  }
+
+  .hat-graphic {
+    width: 45% !important;
+    top: 4% !important;
+    left: 24% !important;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .form input,
+  .form select {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .form button {
+    padding: 16px;
+    font-size: 16px;
+    min-height: 48px;
+  }
 }
 
 @media (max-width: 280px) {
   .card-wrapper {
     transform: none !important;
+  }
+
+  .field {
+    font-size: 4.5vw !important;
+    max-width: 85% !important;
+    left: 2% !important;
+  }
+
+  .field.name {
+    top: 50% !important;
+    font-size: 7vw !important;
+  }
+
+  .field.xHandle {
+    top: 58% !important;
+    font-size: 5.5vw !important;
+  }
+
+  .field.role {
+    top: 63.5% !important;
+    font-size: 5.5vw !important;
+  }
+
+  .field.joined {
+    top: 69% !important;
+    font-size: 5.5vw !important;
+  }
+
+  .profile-pic {
+    width: 32% !important;
+    top: 16% !important;
+    left: 33% !important;
+  }
+
+  .hat-graphic {
+    width: 48% !important;
+    top: 3% !important;
+    left: 22% !important;
   }
 }
 
