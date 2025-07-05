@@ -57,29 +57,6 @@ export default function App() {
     });
   };
 
-  const downloadPDF = () => {
-    const card = cardRef.current;
-    document.body.classList.add("force-clean", "force-download-size");
-
-    html2canvas(card, {
-      scale: 2,
-      backgroundColor: null,
-      useCORS: true,
-    }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF({
-        orientation: "landscape",
-        unit: "px",
-        format: [canvas.width, canvas.height],
-      });
-      pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
-      pdf.save("anoma_id.pdf");
-
-      document.body.classList.remove("force-clean", "force-download-size");
-      triggerConfetti();
-    });
-  };
-
   return (
     <>
       <div className="container">
@@ -107,14 +84,13 @@ export default function App() {
             <input type="date" name="joined" value={form.joined} onChange={handleChange} />
             <div className="file-upload">
               <label htmlFor="file-upload" className="custom-file-upload">
-                📁 {form.image ? "Change Photo" : "Upload Profile Photo"}
+                📁 {form.image ? "Change Photo" : "Upload PFP"}
               </label>
               <input id="file-upload" type="file" name="image" accept="image/*" onChange={handleChange} />
             </div>
 
             <div className="button-group">
               <button type="button" onClick={downloadCard}>Download PNG</button>
-              <button type="button" onClick={downloadPDF}>Download PDF</button>
             </div>
           </form>
 

@@ -110,23 +110,23 @@ h1 {
 }
 
 .form button {
-  padding: 12px;
+  padding: 12px 32px;
   background: linear-gradient(to bottom, var(--accent-color), var(--granite-red));
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 24px;
   cursor: pointer;
   font-size: var(--font-size-base);
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
 .form button:hover {
   background: linear-gradient(to bottom, var(--button-hover), var(--button-active));
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .form button:active {
@@ -142,20 +142,23 @@ h1 {
   display: inline-block;
   padding: 12px 20px;
   cursor: pointer;
-  background: linear-gradient(to bottom, var(--accent-color), var(--granite-red));
-  color: #fff;
+  background: #fff;
+  color: var(--accent-color);
+  border: 2px dashed var(--accent-color);
   border-radius: 8px;
   font-size: var(--font-size-base);
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .custom-file-upload:hover {
-  background: linear-gradient(to bottom, var(--button-hover), var(--button-active));
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: #f8eaea;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 input[type="file"] {
@@ -368,12 +371,12 @@ input[type="file"] {
   }
 
   .field {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
     left: 29.6% !important;
     max-width: 60% !important;
   }
 
-  .field.name { top: 41.5% !important; }
+  .field.name { top: 41.5% !important; font-size: 1.15em !important; }
   .field.xHandle { top: 46.5% !important; }
   .field.role { top: 51.5% !important; }
   .field.joined { top: 56.5% !important; }
