@@ -58,8 +58,8 @@ npm start
 
 ## Customization
 
-- To change the card background, replace `src/images/anomacard.PNG` with your own image.
-- Adjust field positions in `src/App.css` under the `.field` classes for fine-tuning.
+- To change the card background, edit the SVG in `src/IDCard.js` to customize colors, shapes, or layout.
+- Adjust field positions and mobile responsiveness in `src/App.css` under the `.field` classes and their mobile breakpoints for fine-tuning.
 - Modify color variables in the `:root` section of the CSS for theming.
 
 ---
@@ -71,12 +71,6 @@ npm start
 - jsPDF (for PDF generation)
 - canvas-confetti
 - Custom CSS
-
----
-
-## Contributing
-
-Contributions are welcome! Please open an issue or pull request to discuss changes.
 
 ---
 
