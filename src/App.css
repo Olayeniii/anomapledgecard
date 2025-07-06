@@ -453,30 +453,15 @@ input[type="file"] {
   }
 
   .field {
-    font-size: 0.9em !important;
+    font-size: 1em !important;
     max-width: 60% !important;
     left: 29.6% !important;
   }
 
-  .field.name {
-    top: 41.25% !important;
-    font-size: 1em !important;
-  }
-
-  .field.xHandle {
-    top: 46.25% !important;
-    font-size: 0.9em !important;
-  }
-
-  .field.role {
-    top: 50.75% !important;
-    font-size: 0.9em !important;
-  }
-
-  .field.joined {
-    top: 55.625% !important;
-    font-size: 0.9em !important;
-  }
+  .field.name { top: 41.25% !important; font-size: 1em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.95em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.95em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.95em !important; }
 
   .hat-graphic {
     width: 35% !important;
@@ -489,61 +474,61 @@ input[type="file"] {
 
 @media (max-width: 414px) {
   .field {
-    font-size: 1.2em !important;
+    font-size: 0.95em !important;
     max-width: 65% !important;
     left: 29.6% !important;
   }
-  .field.name { top: 41.25% !important; font-size: 1.4em !important; }
-  .field.xHandle { top: 46.25% !important; font-size: 1.2em !important; }
-  .field.role { top: 50.75% !important; font-size: 1.2em !important; }
-  .field.joined { top: 55.625% !important; font-size: 1.2em !important; }
+  .field.name { top: 41.25% !important; font-size: 0.95em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.9em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.9em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.9em !important; }
 }
 
 @media (max-width: 375px) {
   .field {
-    font-size: 1.1em !important;
+    font-size: 0.9em !important;
     max-width: 70% !important;
     left: 29.6% !important;
   }
-  .field.name { top: 41.25% !important; font-size: 1.3em !important; }
-  .field.xHandle { top: 46.25% !important; font-size: 1.1em !important; }
-  .field.role { top: 50.75% !important; font-size: 1.1em !important; }
-  .field.joined { top: 55.625% !important; font-size: 1.1em !important; }
+  .field.name { top: 41.25% !important; font-size: 0.9em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.85em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.85em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.85em !important; }
 }
 
 @media (max-width: 360px) {
   .field {
-    font-size: 1em !important;
+    font-size: 0.85em !important;
     max-width: 75% !important;
     left: 29.6% !important;
   }
-  .field.name { top: 41.25% !important; font-size: 1.2em !important; }
-  .field.xHandle { top: 46.25% !important; font-size: 1em !important; }
-  .field.role { top: 50.75% !important; font-size: 1em !important; }
-  .field.joined { top: 55.625% !important; font-size: 1em !important; }
+  .field.name { top: 41.25% !important; font-size: 0.85em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.8em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.8em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.8em !important; }
 }
 
 @media (max-width: 320px) {
   .field {
-    font-size: 0.95em !important;
+    font-size: 0.8em !important;
     max-width: 80% !important;
     left: 29.6% !important;
   }
-  .field.name { top: 41.25% !important; font-size: 1.1em !important; }
-  .field.xHandle { top: 46.25% !important; font-size: 0.95em !important; }
-  .field.role { top: 50.75% !important; font-size: 0.95em !important; }
-  .field.joined { top: 55.625% !important; font-size: 0.95em !important; }
+  .field.name { top: 41.25% !important; font-size: 0.8em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.75em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.75em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.75em !important; }
 }
 
 @media (max-width: 280px) {
   .field {
-    font-size: 0.9em !important;
+    font-size: 0.75em !important;
     max-width: 85% !important;
     left: 29.6% !important;
   }
-  .field.name { top: 41.25% !important; font-size: 1em !important; }
-  .field.xHandle { top: 46.25% !important; font-size: 0.9em !important; }
-  .field.role { top: 50.75% !important; font-size: 0.9em !important; }
-  .field.joined { top: 55.625% !important; font-size: 0.9em !important; }
+  .field.name { top: 41.25% !important; font-size: 0.75em !important; }
+  .field.xHandle { top: 46.25% !important; font-size: 0.7em !important; }
+  .field.role { top: 50.75% !important; font-size: 0.7em !important; }
+  .field.joined { top: 55.625% !important; font-size: 0.7em !important; }
 }
 
