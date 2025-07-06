@@ -80,7 +80,8 @@ export default function App() {
               <option value="Seeker">Seeker</option>
               <option value="Apprentice">Apprentice</option>
             </select>
-            <input type="date" name="joined" value={form.joined} onChange={handleChange} />
+            <label className="input-label" htmlFor="date-joined">Date joined</label>
+            <input id="date-joined" type="date" name="joined" value={form.joined} onChange={handleChange} />
             <div className="file-upload">
               <label htmlFor="file-upload" className="custom-file-upload">
                 📁 {form.image ? "Change Photo" : "Upload PFP"}
