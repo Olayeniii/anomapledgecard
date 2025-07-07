@@ -14,7 +14,6 @@ A web application for Anoma community members to create custom digital identity 
 - 📸 **Profile Photo Upload**: Add your own profile picture
 - 🎨 **Role Selection**: Choose from Heliax, GrandMaster, IntentMaster, and more
 - 📥 **Export Options**: Download your ID as PNG or PDF
-- 🎉 **Confetti Animation**: Celebrate your new card
 - 📱 **Responsive Design**: Works on desktop and mobile
 
 ---
