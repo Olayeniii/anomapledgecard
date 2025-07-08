@@ -73,6 +73,7 @@ export default function App() {
               <option value="Co-Founder">Co-Founder</option>
               <option value="Moderator">Mod</option>
               <option value="Heliax">Heliax</option>
+              <option value="Wizard">Wizard</option>
               <option value="GrandMaster">GrandMaster</option>
               <option value="IntentMaster">IntentMaster</option>
               <option value="Master">Master</option>
