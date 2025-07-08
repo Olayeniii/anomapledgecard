@@ -70,9 +70,6 @@ export default function App() {
             <input type="text" name="xHandle" placeholder="X Handle" maxLength={15} onChange={handleChange} />
             <select name="role" value={form.role} onChange={handleChange}>
               <option value="">Select Role</option>
-              <option value="Co-Founder">Co-Founder</option>
-              <option value="Moderator">Mod</option>
-              <option value="Heliax">Heliax</option>
               <option value="Wizard">Wizard</option>
               <option value="GrandMaster">GrandMaster</option>
               <option value="IntentMaster">IntentMaster</option>
